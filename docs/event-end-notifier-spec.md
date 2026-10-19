@@ -65,8 +65,13 @@ event-end-notifier/
 ├── README.md                # リポジトリの概要
 ├── .gitignore               # .secrets/, *.pem, *.crx, *.zip
 ├── .secrets/key.pem         # 拡張IDを固定する鍵の秘密鍵（Git には入れない）
-├── docs/
-│   └── event-end-notifier-spec.md
+├── docs/                    # GitHub Pages で公開するフォルダ
+│   ├── event-end-notifier-spec.md
+│   ├── index.html           # ホームページ
+│   ├── privacy.html         # プライバシーポリシー
+│   ├── terms.html           # 利用規約
+│   ├── style.css
+│   └── .nojekyll            # Jekyll で変換せずそのまま公開する
 └── src/                     # 拡張機能本体（このフォルダを読み込む）
     ├── manifest.json
     ├── README.md
@@ -85,7 +90,7 @@ event-end-notifier/
         └── logic.test.js    # Chrome API を使わない部分のテスト（Deno）
 ```
 
-公開ページ（ホームページ・プライバシーポリシー・利用規約）は別リポジトリ `710ooooo/710ooooo.github.io` の `event-end-notifier/` に置く（10章）。
+公開ページ（ホームページ・プライバシーポリシー・利用規約）は `docs/` に置き、GitHub Pages（`main` ブランチの `/docs`）で公開する（10章）。
 
 ### 4.2 manifest.json（骨子）
 
@@ -287,11 +292,11 @@ offscreen document は、音が止まって30秒たつと Chrome が自動で閉
   - ホームページ、プライバシーポリシー、利用規約、デモ動画、スコープが必要な理由の説明が必要
   - 審査が通るまで、外部ユーザーは「未確認のアプリ」警告付きで最大100人までしか使えない
   - CASA（セキュリティ評価）は restricted scope ではないので不要
-- 公開ページ（GitHub Pages、`710ooooo/710ooooo.github.io`）
+- 公開ページ（このリポジトリの `docs/` を GitHub Pages で公開）
   - ホームページ: https://710ooooo.github.io/event-end-notifier/
   - プライバシーポリシー: https://710ooooo.github.io/event-end-notifier/privacy.html
   - 利用規約: https://710ooooo.github.io/event-end-notifier/terms.html
-  - 承認済みドメイン: `710ooooo.github.io`（Search Console で所有確認する）
+  - 承認済みドメイン: `710ooooo.github.io`（Search Console で所有確認する。確認用ファイルはサイトの一番上に置く必要があるので、`710ooooo/710ooooo.github.io` リポジトリに置く）
 - 進め方: ストアの審査と OAuth の確認は並行して進める。確認が通るまではストアに**限定公開**で出し、通ったら一般公開にする
 - ストアの説明には、データの取り扱い（外部に送信しないこと）を明記する
 - zip にするときは `src/` の中身から `tests/` を除く（`.secrets/` と仕様書は `src/` の外にある）

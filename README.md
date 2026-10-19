@@ -32,7 +32,7 @@ Chrome 116 以上が必要です。Google Cloud 側の準備やテストの実�
 
 ```
 src/     拡張機能本体（Chrome で読み込むフォルダ）
-docs/    仕様書
+docs/    仕様書と公開ページ（GitHub Pages で公開）
 ```
 
 - 仕様書: [docs/event-end-notifier-spec.md](docs/event-end-notifier-spec.md)
