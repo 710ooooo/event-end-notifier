@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | Event End Notifier</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav><a href="./">Event End Notifier</a><a href="terms.html">利用規約 / Terms of Service</a><a href="#en">English</a></nav>
+
+<h1>プライバシーポリシー</h1>
+<p class="meta">制定日: 2026年10月19日 / 最終更新日: 2026年10月19日</p>
+
+<p>710ooooo（以下「開発者」）は、Chrome 拡張機能「Event End Notifier」（以下「本拡張機能」）における利用者の情報の取り扱いを、以下のとおり定めます。</p>
+
+<h2>1. アクセスする Google ユーザーデータ</h2>
+<p>本拡張機能は、利用者が Google アカウントでログインして許可した場合に限り、Google Calendar API を通じて次の情報を<strong>読み取り専用</strong>で取得します。</p>
+<table>
+  <tr><th>スコープ</th><th>取得する情報</th></tr>
+  <tr><td><code>calendar.calendarlist.readonly</code></td><td>カレンダーの一覧（ID、名前、色、メインのカレンダーかどうか）</td></tr>
+  <tr><td><code>calendar.events.readonly</code></td><td>選択したカレンダーの、現在から 24 時間以内の予定（ID、タイトル、開始・終了時刻、状態、予定の種類、利用者自身の出欠の回答、Google Meet などの会議リンク）</td></tr>
+</table>
+<p>予定の説明文、場所、ほかの参加者の名前やメールアドレス、添付ファイルは取得しません。予定の作成・変更・削除も行いません。</p>
+
+<h2>2. 利用目的</h2>
+<p>取得した情報は、次の目的にのみ使います。</p>
+<ul>
+  <li>予定の終了前と終了時刻にデスクトップ通知を表示すること</li>
+  <li>拡張機能のポップアップに、これからの予定を表示すること</li>
+  <li>設定画面で、通知の対象にするカレンダーを選べるようにすること</li>
+</ul>
+<p>広告、プロファイリング、AI・機械学習モデルの学習には使いません。</p>
+
+<h2>3. 保存場所と保存期間</h2>
+<ul>
+  <li>取得した予定と設定は、利用者のブラウザ内（<code>chrome.storage.local</code>）にだけ保存します。開発者のサーバーやクラウドには保存しません。</li>
+  <li>予定は約 15 分ごとに取り直し、そのたびに最新の 24 時間分で置き換えます。通知済みの記録は 2 日で消えます。</li>
+  <li>アクセストークンは Chrome が管理し、本拡張機能が独自に保存することはありません。</li>
+</ul>
+
+<h2>4. 第三者への提供</h2>
+<p>本拡張機能の通信先は Google の API（<code>www.googleapis.com</code>、<code>oauth2.googleapis.com</code>）だけです。取得した情報を開発者や第三者に送信・販売・共有することはありません。アクセス解析ツールや広告ツールも使っていません。</p>
+
+<h2>5. データの削除と許可の取り消し</h2>
+<ul>
+  <li>設定画面の「ログアウト」を押すと、Google への許可を取り消し、保存していた予定を削除します。</li>
+  <li>本拡張機能をアンインストールすると、ブラウザ内に保存したデータはすべて削除されます。</li>
+  <li><a href="https://myaccount.google.com/permissions">Google アカウントの「サードパーティ製のアプリとサービス」</a>から、いつでも許可を取り消せます。</li>
+</ul>
+
+<h2>6. Google API サービスのユーザーデータに関するポリシーの遵守</h2>
+<p>本拡張機能による Google API から取得した情報の使用および他のアプリへの転送は、<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API サービスのユーザーデータに関するポリシー</a>（限定使用の要件を含む）に従います。</p>
+
+<h2>7. 改定</h2>
+<p>本ポリシーを改定する場合は、このページで公開し、最終更新日を更新します。取得する情報や利用目的を広げる場合は、本拡張機能の中でもお知らせします。</p>
+
+<h2>8. お問い合わせ</h2>
+<p>710ooooo<br><a href="mailto:710ooooo.dev@gmail.com">710ooooo.dev@gmail.com</a></p>
+
+<section class="lang" id="en" lang="en">
+<h1>Privacy Policy</h1>
+<p class="meta">Effective: October 19, 2026 / Last updated: October 19, 2026</p>
+
+<p>This policy explains how 710ooooo ("we") handles your information in the Chrome extension "Event End Notifier" (the "Extension").</p>
+
+<h3>1. Google user data we access</h3>
+<p>Only after you sign in with Google and grant permission, the Extension uses the Google Calendar API with <strong>read-only</strong> access to obtain:</p>
+<table>
+  <tr><th>Scope</th><th>Data</th></tr>
+  <tr><td><code>calendar.calendarlist.readonly</code></td><td>Your calendar list (ID, name, color, whether it is your primary calendar)</td></tr>
+  <tr><td><code>calendar.events.readonly</code></td><td>Events in the selected calendars within the next 24 hours (ID, title, start and end time, status, event type, your own RSVP status, and conference links such as Google Meet)</td></tr>
+</table>
+<p>We do not access event descriptions, locations, other attendees' names or email addresses, or attachments. The Extension never creates, modifies or deletes events.</p>
+
+<h3>2. How we use it</h3>
+<p>The data is used only to show desktop notifications before and at the end of your events, to list upcoming events in the Extension's popup, and to let you choose which calendars to watch. It is not used for advertising, profiling, or training AI/ML models.</p>
+
+<h3>3. Storage and retention</h3>
+<p>Events and settings are stored only in your browser (<code>chrome.storage.local</code>), never on our servers. Events are refreshed about every 15 minutes and replaced with the latest 24 hours. Records of sent notifications are deleted after 2 days. Access tokens are managed by Chrome and are not stored by the Extension.</p>
+
+<h3>4. Sharing</h3>
+<p>The Extension communicates only with Google APIs (<code>www.googleapis.com</code>, <code>oauth2.googleapis.com</code>). We do not transfer, sell or share your data with us or any third party, and we use no analytics or advertising tools.</p>
+
+<h3>5. Deletion and revoking access</h3>
+<p>Clicking "Log out" in the settings revokes the Google authorization and deletes the stored events. Uninstalling the Extension deletes all data it stored. You can also revoke access at any time from <a href="https://myaccount.google.com/permissions">your Google Account's third-party apps page</a>.</p>
+
+<h3>6. Limited Use disclosure</h3>
+<p>Event End Notifier's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h3>7. Changes</h3>
+<p>We will post any changes on this page and update the "Last updated" date. If we expand the data we access or how we use it, we will also notify you in the Extension.</p>
+
+<h3>8. Contact</h3>
+<p>710ooooo<br><a href="mailto:710ooooo.dev@gmail.com">710ooooo.dev@gmail.com</a></p>
+</section>
+</main>
+</body>
+</html>
