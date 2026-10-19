@@ -62,6 +62,7 @@ Googleカレンダー標準では「開始前」しか通知できないため�
 ```
 event-end-notifier/
 ├── LICENSE
+├── README.md                # リポジトリの概要
 ├── .gitignore               # .secrets/, *.pem, *.crx, *.zip
 ├── .secrets/key.pem         # 拡張IDを固定する鍵の秘密鍵（Git には入れない）
 ├── docs/
