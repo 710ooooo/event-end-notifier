@@ -1,8 +1,8 @@
 // 実行: deno test tests/
 import assert from 'node:assert/strict';
-import { isTarget, mergeEvents } from '../src/calendar.js';
-import { alarmName, parseAlarmName, planAlarms } from '../src/scheduler.js';
-import { DEFAULT_SETTINGS } from '../src/storage.js';
+import { isTarget, mergeEvents } from '../calendar.js';
+import { alarmName, parseAlarmName, planAlarms } from '../scheduler.js';
+import { DEFAULT_SETTINGS } from '../storage.js';
 
 const timed = (overrides = {}) => ({
   id: 'abc123',

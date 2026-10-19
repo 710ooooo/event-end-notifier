@@ -16,7 +16,7 @@ import {
 const SYNC_RANGE_MS = 24 * 60 * 60 * 1000;
 // スリープ復帰などで遅れて発火したとき、終了からこれ以上たっていたら通知しない
 const STALE_LIMIT_MS = 10 * 60 * 1000;
-const OFFSCREEN_URL = 'src/offscreen.html';
+const OFFSCREEN_URL = 'offscreen.html';
 
 // ---- 同期 ----
 

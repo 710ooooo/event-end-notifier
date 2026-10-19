@@ -69,15 +69,14 @@ event-end-notifier/
 └── src/                     # 拡張機能本体（このフォルダを読み込む）
     ├── manifest.json
     ├── README.md
-    ├── src/
-    │   ├── background.js    # Service Worker: 認証・同期・アラーム・通知
-    │   ├── calendar.js      # Calendar API ラッパーと予定のフィルタ
-    │   ├── scheduler.js     # 予定 → アラーム変換
-    │   ├── storage.js       # 設定・キャッシュ・状態の読み書き
-    │   ├── offscreen.html   # 通知音の再生
-    │   ├── offscreen.js
-    │   ├── popup/           # popup.html / popup.js / popup.css
-    │   └── options/         # options.html / options.js / options.css
+    ├── background.js        # Service Worker: 認証・同期・アラーム・通知
+    ├── calendar.js          # Calendar API ラッパーと予定のフィルタ
+    ├── scheduler.js         # 予定 → アラーム変換
+    ├── storage.js           # 設定・キャッシュ・状態の読み書き
+    ├── offscreen.html       # 通知音の再生
+    ├── offscreen.js
+    ├── popup/               # popup.html / popup.js / popup.css
+    ├── options/             # options.html / options.js / options.css
     ├── assets/
     │   ├── icon16.png / icon48.png / icon128.png
     │   └── chime.mp3
@@ -106,12 +105,12 @@ event-end-notifier/
       "https://www.googleapis.com/auth/calendar.calendarlist.readonly"
     ]
   },
-  "background": { "service_worker": "src/background.js", "type": "module" },
+  "background": { "service_worker": "background.js", "type": "module" },
   "action": {
-    "default_popup": "src/popup/popup.html",
+    "default_popup": "popup/popup.html",
     "default_icon": { "16": "assets/icon16.png", "48": "assets/icon48.png", "128": "assets/icon128.png" }
   },
-  "options_page": "src/options/options.html",
+  "options_page": "options/options.html",
   "icons": { "16": "assets/icon16.png", "48": "assets/icon48.png", "128": "assets/icon128.png" }
 }
 ```

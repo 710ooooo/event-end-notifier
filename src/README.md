@@ -72,14 +72,13 @@ deno test tests/
 
 ```
 manifest.json
-src/
-  background.js    Service Worker: 認証・同期・アラーム・通知
-  calendar.js      Calendar API ラッパーと予定のフィルタ
-  scheduler.js     予定 → アラーム変換
-  storage.js       設定・キャッシュ・状態の読み書き
-  offscreen.*      通知音の再生
-  popup/           ポップアップ
-  options/         設定画面
+background.js      Service Worker: 認証・同期・アラーム・通知
+calendar.js        Calendar API ラッパーと予定のフィルタ
+scheduler.js       予定 → アラーム変換
+storage.js         設定・キャッシュ・状態の読み書き
+offscreen.*        通知音の再生
+popup/             ポップアップ
+options/           設定画面
 assets/            アイコン、通知音
 tests/             ロジックのテスト
 ```
