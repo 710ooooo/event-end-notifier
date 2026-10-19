@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Event End Notifier",
+  "version": "0.1.0",
+  "description": "Googleカレンダーの予定の終了前に通知します",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhK8oQSOzAZqGtYngC4ylXABCVd5pq9k3G0NSKZoERMD61KfXJNMk2kANKhnHoriNJ3Cbi/6xWGEMOmF/NubbAO+iytOoBI6+k2bC/8Q2DCeeQQMheWwrUq+A95JPKXhnk5SnXcCNttcxvAUwtpRVm+krCzXQwec5p4od2rLbEsy2c4bcDczVoFrtP1xrz3TeiV05TZ5Leoj6B5YWdxkTQ7vSxnXRGGLNGg0zbyONzaoL5/YE3jThVDu5YKf66i555qzor0RMIxPaV418V+raS3xZwwzHQh746Mva3c2MtgLPYu+Nw1iuBqJQLvrD51WC0bcQii5W+AzXg3Jr30/etwIDAQAB",
+  "minimum_chrome_version": "116",
+  "permissions": ["identity", "alarms", "notifications", "storage", "offscreen"],
+  "host_permissions": ["https://www.googleapis.com/*"],
+  "oauth2": {
+    "client_id": "706772222697-fo2nptq4df4g64janovtfo03m0viurqo.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar.events.readonly",
+      "https://www.googleapis.com/auth/calendar.calendarlist.readonly"
+    ]
+  },
+  "background": { "service_worker": "src/background.js", "type": "module" },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": { "16": "assets/icon16.png", "48": "assets/icon48.png", "128": "assets/icon128.png" }
+  },
+  "options_page": "src/options/options.html",
+  "icons": { "16": "assets/icon16.png", "48": "assets/icon48.png", "128": "assets/icon128.png" }
+}

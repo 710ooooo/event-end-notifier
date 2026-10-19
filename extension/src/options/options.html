@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Event End Notifier の設定</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Event End Notifier の設定</h1>
+
+      <form id="form">
+        <fieldset>
+          <legend>通知のタイミング</legend>
+          <label class="row">
+            終了
+            <input type="number" name="preMinutes" min="0" max="60" step="1" required />
+            分前に通知する（0 で通知しない）
+          </label>
+          <label class="row">
+            <input type="checkbox" name="notifyAtEnd" />
+            終了時刻ちょうどにも通知する
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>通知の出し方</legend>
+          <label class="row">
+            <input type="checkbox" name="sound" />
+            通知音を鳴らす
+          </label>
+          <label class="row">
+            <input type="checkbox" name="requireInteraction" />
+            閉じるまで通知を表示し続ける
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>対象にする予定</legend>
+          <p class="note">終日予定は常に対象外です。</p>
+          <label class="row">
+            <input type="checkbox" name="excludeDeclined" />
+            「不参加」と回答した予定を除外する
+          </label>
+          <label class="row">
+            <input type="checkbox" name="onlyWithMeetLink" />
+            Google Meet などの会議リンクがある予定だけを対象にする
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>対象にするカレンダー</legend>
+          <div id="calendars"></div>
+          <p id="calendars-status" class="note"></p>
+        </fieldset>
+      </form>
+
+      <p id="saved" class="saved" aria-live="polite"></p>
+
+      <section class="account">
+        <h2>アカウント</h2>
+        <button id="logout">ログアウト</button>
+        <p class="note">ログアウトすると、保存した予定と通知の予約を消します。</p>
+      </section>
+    </main>
+
+    <script src="options.js" type="module"></script>
+  </body>
+</html>

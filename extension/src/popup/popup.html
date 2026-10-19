@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Event End Notifier</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Event End Notifier</h1>
+      <a id="open-options" href="#" title="設定">設定</a>
+    </header>
+
+    <section id="login" hidden>
+      <p>Googleカレンダーの予定を読むには、ログインが必要です。</p>
+      <button id="login-button" class="primary">Googleでログイン</button>
+      <p id="login-error" class="error" hidden></p>
+    </section>
+
+    <main id="main" hidden>
+      <section>
+        <h2>進行中の会議</h2>
+        <ul id="ongoing" class="events"></ul>
+        <p id="ongoing-empty" class="empty" hidden>進行中の会議はありません</p>
+      </section>
+
+      <section>
+        <h2>この後の予定</h2>
+        <ul id="upcoming" class="events"></ul>
+        <p id="upcoming-empty" class="empty" hidden>この後の予定はありません</p>
+      </section>
+    </main>
+
+    <footer>
+      <p id="error" class="error" hidden></p>
+      <div class="sync-row">
+        <span id="last-sync"></span>
+        <button id="sync-button">今すぐ同期</button>
+      </div>
+    </footer>
+
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>
