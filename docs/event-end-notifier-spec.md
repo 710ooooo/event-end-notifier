@@ -64,9 +64,9 @@ event-end-notifier/
 ├── LICENSE
 ├── .gitignore               # .secrets/, *.pem, *.crx, *.zip
 ├── .secrets/key.pem         # 拡張IDを固定する鍵の秘密鍵（Git には入れない）
-├── _docs/
+├── docs/
 │   └── event-end-notifier-spec.md
-└── extension/
+└── src/                     # 拡張機能本体（このフォルダを読み込む）
     ├── manifest.json
     ├── README.md
     ├── src/
@@ -294,7 +294,7 @@ offscreen document は、音が止まって30秒たつと Chrome が自動で閉
   - 承認済みドメイン: `710ooooo.github.io`（Search Console で所有確認する）
 - 進め方: ストアの審査と OAuth の確認は並行して進める。確認が通るまではストアに**限定公開**で出し、通ったら一般公開にする
 - ストアの説明には、データの取り扱い（外部に送信しないこと）を明記する
-- zip にするときは `extension/` の中身から `tests/` を除く（`.secrets/` と仕様書は `extension/` の外にある）
+- zip にするときは `src/` の中身から `tests/` を除く（`.secrets/` と仕様書は `src/` の外にある）
 
 ## 11. 開発ステップ
 

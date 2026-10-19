@@ -1,7 +1,7 @@
 # Event End Notifier
 
 Googleカレンダーの予定の**終了前・終了時刻**にデスクトップ通知を出す Chrome 拡張機能（Manifest V3）です。
-仕様は [event-end-notifier-spec.md](../_docs/event-end-notifier-spec.md) を参照してください。
+仕様は [event-end-notifier-spec.md](../docs/event-end-notifier-spec.md) を参照してください。
 
 - 予定データは拡張の中（`chrome.storage.local`）だけで扱い、外部サーバーには送りません
 - カレンダーへのアクセスは読み取り専用です
@@ -38,7 +38,7 @@ fhipcnepdiplkebbnjngaokiadbkcbhl
 3. ID が `fhipcnepdiplkebbnjngaokiadbkcbhl` になっていることを確認する
 4. ツールバーのアイコンからポップアップを開き、「Googleでログイン」を押す
 
-zip にしてウェブストアへ出すときは `tests/` を除いてください（`.secrets/` と仕様書は `extension/` の外にあるので含まれません）。
+zip にしてウェブストアへ出すときは `tests/` を除いてください（`.secrets/` と仕様書は `src/` の外にあるので含まれません）。
 
 ## 使い方
 
