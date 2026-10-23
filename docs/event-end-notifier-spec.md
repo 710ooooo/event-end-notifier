@@ -293,7 +293,8 @@ offscreen document は、音が止まって30秒たつと Chrome が自動で閉
   - 審査が通るまで、外部ユーザーは「未確認のアプリ」警告付きで最大100人までしか使えない
   - CASA（セキュリティ評価）は restricted scope ではないので不要
 - 公開ページ（このリポジトリの `docs/` を GitHub Pages で公開）
-  - ホームページ: https://710ooooo.github.io/event-end-notifier/
+  - ホームページ: https://710ooooo.github.io/ （OAuth のブランディングに登録する URL。Search Console で所有確認したプロパティと一致させるため、サイトの一番上に置く。転送は不可。ソースは `710ooooo/710ooooo.github.io` の `index.html`）
+  - ホームページ（サブパス版）: https://710ooooo.github.io/event-end-notifier/
   - プライバシーポリシー: https://710ooooo.github.io/event-end-notifier/privacy.html
   - 利用規約: https://710ooooo.github.io/event-end-notifier/terms.html
   - 承認済みドメイン: `710ooooo.github.io`（Search Console で所有確認する。確認用ファイルはサイトの一番上に置く必要があるので、`710ooooo/710ooooo.github.io` リポジトリに置く）
